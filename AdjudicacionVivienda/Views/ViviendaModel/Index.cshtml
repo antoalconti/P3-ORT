@@ -1,0 +1,86 @@
+﻿@model IEnumerable<AdjudicacionVivienda.Models.ViviendaModel>
+
+@{
+    ViewBag.Title = "Viviendas";
+}
+
+<h2>Listado de viviendas</h2>
+<p>@ViewBag.Mensaje</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Calle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumPuerta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomBarrio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantBanios)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CantDorm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Metraje)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Anio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrecioFinal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumPuerta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Barrio.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantBanios)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantDorm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Metraje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Anio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioFinal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+        </tr>
+    }
+
+</table>

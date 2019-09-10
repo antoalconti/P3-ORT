@@ -1,0 +1,126 @@
+﻿
+@model AdjudicacionVivienda.Models.FBarrioModel
+
+@{
+    ViewBag.Title = "Filtrar viviendas Barrio";
+}
+
+<h2>Filtrar viviendas por barrio</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.DropDownListFor(m => m.IdBarrio, Model.ListaBarrios)
+        <input type="submit" value="Filtrar" />
+    </p>
+}
+<p>@ViewBag.Mensaje</p>
+
+<table class="table">
+    <tr>
+        <th>
+           Estado
+        </th>
+        <th>
+            Calle
+        </th>
+        <th>
+            Num puerta
+        </th>
+        <th>
+            Nombre de Barrio
+        </th>
+        <th>
+            Descripcion
+        </th>
+        <th>
+            Baños
+        </th>
+        <th>
+            Dormitorios
+        </th>
+        <th>
+            Metraje
+        </th>
+        <th>
+            Año
+        </th>
+        <th>
+            PrecioFinal
+        </th>
+        <th>
+            PrecioCuota
+        </th>
+        <th>
+            CantCoutas
+        </th>
+        <th>
+            Contribucion
+        </th>
+        <th>
+            ITP
+        </th>
+        <th>
+            Tipo
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.viviendas)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Calle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumPuerta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Barrio.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantBanios)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantDorm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Metraje)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Anio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioFinal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecioCuota)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CantidadCuotas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contribucion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ITP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @if (Session["Tipo"].ToString() == "Postulante")
+                {
+                    <a href="http://localhost:17951/SorteoModel/InscripcionSorteo?idViv=@item.ID">Inscribirme Sorteo</a>
+                }
+            </td>
+        </tr>
+        }
+</table>
+

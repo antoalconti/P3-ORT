@@ -1,0 +1,17 @@
+1#Direccion1#1111#Malvin#Cercano a la playa#2#3#90#2000#80000#Usada#100
+2#Direccion2#2222#Pocitos#Barrio del municipio CH#1#2#70#2013#100000#Usada#100
+3#Direccion3#3333#Centro#Zona centrica#2#4#60#2018#241400#Nueva#NULL
+4#Direccion4#4444#Cordon#Barrio muy comercial#1#3#80#2001#50000#Usada#100
+5#Direccion5#5555#Ciudad Vieja#Barrio antiguo#3#5#140#2000#70000#Usada#100
+6#Direccion6#6666#Malvin#Cercano a la playa#2#3#50#2018#2414000#Nueva#NULL
+7#Direccion7#7777#Pocitos#Barrio del municipio CH#1#1#45#2015#120000#Usada#100
+8#Direccion8#8888#Malvin#Cercano a la playa#2#1#45#2019#50000#Nueva#NULL
+9#Direccion8#9999#Cordon#Barrio muy comercial#2#1#50#2018#120000#Nueva#NULL
+10#Direccion10#1234#Pocitos#Barrio del municipio CH#3#2#120#2015#2000#Usada#100
+11#Direccion11#2345#Ciudad Vieja#Barrio antiguo#1#1#60#2018#120000#Nueva#NULL
+12#Direccion12#3456#Cordon#Barrio muy comercial#2#2#45#2015#24000#Usada#100
+13#Direccion13#4567#Centro#Zona centrica#5#5#100#2015#300000#Usada#100
+14#Direccion14#5678#Pocitos#Barrio del municipio CH#1#1#45#2019#120000#Nueva#NULL
+15#Direccion15#6789#Malvin#Cercano a la playa#2#2#50#2018#1500000#Nueva#NULL
+16#Direccion16#9876#Cordon#Barrio muy comercial#3#3#100#1990#20000#Usada#100
+17#Datos erroneos#9876#Cordon#Barrio muy comercial#3#-3#100#1990#20000#Usada#100

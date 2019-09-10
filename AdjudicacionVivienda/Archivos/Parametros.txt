@@ -1,0 +1,1 @@
+cotizacionUI=4.1414#cotizacionUSD=34.4#interesAnual=8#ITP=10#plazoNueva=5#plazoUsada=4#topeMts=70#

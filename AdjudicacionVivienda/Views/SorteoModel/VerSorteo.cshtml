@@ -1,0 +1,82 @@
+﻿@model AdjudicacionVivienda.Models.ListadoSorteoModel
+
+@{
+    ViewBag.Title = "VerSorteo";
+}
+
+<h2>Sorteos no Realizados</h2>
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Fecha
+        </th>
+        <th>
+            Vivienda Id
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.listaNoRealizados)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViviendaId)
+            </td>
+            <td>
+                @if (item.Fecha.Date == DateTime.Today && Session["Tipo"].ToString() =="Jefe")
+                {
+                    <a href="http://localhost:17951/SorteoModel/RealizarSorteo?idS=@item.Id">Realizar</a>
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+<h2>Sorteos Realizados</h2>
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Fecha
+        </th>
+        <th>
+            Vivienda Id
+        </th>
+        <th>
+            Ganador
+        </th>
+    </tr>
+
+    @foreach (var item in Model.listaRealizados)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ViviendaId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ganador.Nombre)
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+
